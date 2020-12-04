@@ -90,7 +90,7 @@ def main():
     round_limit = 1  # how many rounds to play?
     cround = 0  # current round count
 
-    train = False  # True #train or deploy?
+    train = True  # True #train or deploy?
     # write to a CSV file for training
     with open('pong_data.csv', mode='w') as train_file:
         print("Recording to a CSV file for training.")
@@ -130,9 +130,10 @@ def main():
                     b0.reset()  # reset ball position
                 # if train: #user input
                 if event.key == pygame.K_UP or event.key == pygame.K_RIGHT:
-                    dir = -1
+                        dir = -1
                 elif event.key == pygame.K_DOWN or event.key == pygame.K_LEFT:
-                    dir = 1
+                        dir = 1
+
 
                     # if ball is gone, reset
         if b0.x > CONSTS.WIDTH - Ball.RADIUS:
@@ -156,8 +157,11 @@ def main():
             # CONSTS.VELOCITY, CONSTS.FPS])
             X = [[b0.x, b0.y]]
             y = model.predict(X)
-            if(p0.y != y):
-                dir = y - p0.y
+            if(p0.y < y):
+                dir += .1
+            elif(p0.y > y):
+                dir -= .1
+
 
 
 

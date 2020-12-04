@@ -1,6 +1,6 @@
 import pandas as pd
-from sklearn.naive_bayes import GaussianNB
 from joblib import dump
+from sklearn.linear_model import LinearRegression
 
 
 data = pd.read_csv('pong_data.csv')
@@ -9,7 +9,7 @@ print(train_x.shape)
 train_y = data['paddle_y']
 print(train_y.shape)
 
-model = GaussianNB()
+model = LinearRegression(fit_intercept=True)
 model.fit(train_x, train_y)
 dump(model, 'model.joblib')
 
