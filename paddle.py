@@ -40,6 +40,10 @@ class Paddle:
         self.y = self.CONSTS.HEIGHT // 2
         self.update(0)
 
+    def setY(self, y):
+        self.show(self.bgcolor)
+        self.y = y
+        self.show(self.fgcolor)
 #init, show, update
 #--init y only
 #show: draw rect

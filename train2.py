@@ -11,7 +11,7 @@ print(train_y.shape)
 
 model = LinearRegression(fit_intercept=True)
 model.fit(train_x, train_y)
-dump(model, 'model.joblib')
+dump(model, 'modelLR.joblib')
 
 
 

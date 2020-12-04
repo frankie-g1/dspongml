@@ -90,7 +90,7 @@ def main():
     round_limit = 1  # how many rounds to play?
     cround = 0  # current round count
 
-    train = True  # True #train or deploy?
+    train = False  # True #train or deploy?
     # write to a CSV file for training
     with open('pong_data.csv', mode='w') as train_file:
         print("Recording to a CSV file for training.")
@@ -110,7 +110,7 @@ def main():
     if not train:
         # deployment: load model:
         from joblib import dump, load
-        model = load('model.joblib')  # load
+        model = load('modelG.joblib')  # load
 
     # main loop
     while running:
@@ -157,12 +157,9 @@ def main():
             # CONSTS.VELOCITY, CONSTS.FPS])
             X = [[b0.x, b0.y]]
             y = model.predict(X)
-            if(p0.y < y):
-                dir += .1
-            elif(p0.y > y):
-                dir -= .1
 
-
+            if p0.y != y:
+                p0.setY(int (y))
 
 
 
