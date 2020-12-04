@@ -39,4 +39,3 @@ Here are two different types fo models from two different training sets playing 
 
 ## My Example on LR learning
 
-[![Image from Gyazo](https://i.gyazo.com/da246fc9481e47cf4ddd952df61fb949.gif)](https://gyazo.com/da246fc9481e47cf4ddd952df61fb949)
