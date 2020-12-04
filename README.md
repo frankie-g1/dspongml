@@ -39,3 +39,4 @@ Here are two different types fo models from two different training sets playing 
 
 ## My Example on LR learning
 
+[![Capturing a Gyazo Gif is not easy](https://i.gyazo.com/39302fff0c95f6fc2df1a239470b0a50.gif)](https://gyazo.com/39302fff0c95f6fc2df1a239470b0a50)
